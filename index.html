@@ -16,8 +16,7 @@
     <div id="topNav" class="clickable">
         <div id="navLogo"><a href="">Sneakas</a></div>
         <div id="navContent">
-            <div id="navFor" class="navContents" onmouseover="toggleNavDropdown(this)"
-                onmouseout="toggleNavDropdown(this)">
+            <div id="navFor" class="navContents pointer">
                 <div class="navDropdownTitle">For &#11206;</div>
                 <div class="dropdown">
                     <div class="dropdownItem">
@@ -31,8 +30,7 @@
                     </div>
                 </div>
             </div>
-            <div id="navBrands" class="navContents" onmouseover="toggleNavDropdown(this)"
-                onmouseout="toggleNavDropdown(this)">
+            <div id="navBrands" class="navContents pointer">
                 <div class="navDropdownTitle">Brands &#11206;</div>
                 <div class="dropdown">
                     <div class="dropdownItem">
@@ -52,18 +50,19 @@
     </div>
     <div id="mainContainer">
         <span class="clickable">
-            <div id="leftNavScrollUp" class="leftNavScroll" onclick="leftNavScrollUp()">&#11205;</div>
+    cursor: pointer;
+            <div id="leftNavScrollUp" class="leftNavScroll pointer" onclick="leftNavScrollUp()">&#11205;</div>
         </span>
         <div id="leftNav" class="clickable">
             <!-- <div id="scrollBarOverlay"></div> -->
-            <div id="leftNavItem1" class="leftNavItems itemActive" onclick="selectShoe(this, 0)">
+            <div id="leftNavItem1" class="leftNavItems itemActive pointer" onclick="selectShoe(this, 0)">
                 <img class="leftNavImg" src="img/nikeAirMax270.jpg" alt="Nike Air Max 270"><br>
                 <div class="leftNavText">
                     Nike Air Max 270 <br>
                     <div class="shoePriceLeftNav">$149.99</div>
                 </div>
             </div>
-            <div id="leftNavItem2" class="leftNavItems" onclick="selectShoe(this, 1)">
+            <div id="leftNavItem2" class="leftNavItems pointer" onclick="selectShoe(this, 1)">
                 <img class="leftNavImg" src="img/nikeAirMax270React.jpg" alt="Nike Air Max 270 React"><br>
                 <div class="leftNavText">
                     Nike Air Max 270 React <br>
@@ -71,21 +70,21 @@
 
                 </div>
             </div>
-            <div id="leftNavItem3" class="leftNavItems" onclick="selectShoe(this, 2)">
+            <div id="leftNavItem3" class="leftNavItems pointer" onclick="selectShoe(this, 2)">
                 <img class="leftNavImg" src="img/nikeAirZoomPegasus.jpg" alt="nike air zoom pegasus"><br>
                 <div class="leftNavText">
                     Nike Air Zoom Pegasus <br>
                     <div class="shoePriceLeftNav">$199.99</div>
                 </div>
             </div>
-            <div id="leftNavItem4" class="leftNavItems" onclick="selectShoe(this, 3)">
+            <div id="leftNavItem4" class="leftNavItems pointer" onclick="selectShoe(this, 3)">
                 <img class="leftNavImg" src="img/nikeAirZoomPegasus36.jpg" alt="nike air zoom pegasus 36"><br>
                 <div class="leftNavText">
                     Nike Air Zoom Pegasus 36<br>
                     <div class="shoePriceLeftNav">$209.99</div>
                 </div>
             </div>
-            <div id="leftNavItem5" class="leftNavItems" onclick="selectShoe(this, 4)">
+            <div id="leftNavItem5" class="leftNavItems pointer" onclick="selectShoe(this, 4)">
                 <img class="leftNavImg" src="img/nikeDaybreak.jpg" alt="Nike Daybreak"><br>
                 <div class="leftNavText">
                     Nike Daybreak <br>
@@ -104,14 +103,30 @@
             </div>
             <div id="sizeContainer" class="clickable">
                 <div id="sizeText">Sizes</div>
-                <div id="size7" class="sizes" onclick="setSize(this)">7</div>
-                <div id="size8" class="sizes" onclick="setSize(this)">8</div>
-                <div id="size9" class="sizes" onclick="setSize(this)">9</div>
-                <div id="size10" class="sizes sizeActive" onclick="setSize(this)">10</div>
-                <div id="size12" class="sizes" onclick="setSize(this)">11</div>
-                <div id="size12" class="sizes" onclick="setSize(this)">12</div>
-                <div id="size13" class="sizes" onclick="setSize(this)">13</div>
-                <div id="size14" class="sizes" onclick="setSize(this)">14</div>
+                <div id="size7" class="sizes pointer" onclick="setSize(this)">7</div>
+                <div id="size8" class="sizes pointer" onclick="setSize(this)">8</div>
+                <div id="size9" class="sizes pointer" onclick="setSize(this)">9</div>
+                <div id="size10" class="sizes sizeActive pointer" onclick="setSize(this)">10</div>
+                <div id="size12" class="sizes pointer" onclick="setSize(this)">11</div>
+                <div id="size12" class="sizes pointer" onclick="setSize(this)">12</div>
+                <div id="size13" class="sizes pointer" onclick="setSize(this)">13</div>
+                <div id="size14" class="sizes pointer" onclick="setSize(this)">14</div>
+            </div>
+            <div id="bottomNav">
+                <div id="quantitySelectionContainer">
+                    <div id="decreaseQuantity" class="clickable pointer invertColor" onclick="changeQuantity(-1);">-</div>
+                    <input type="text" id="quantityDisplay" value="1">
+                    <div id="increaseQuantity"  class="clickable pointer invertColor" onclick="changeQuantity(1);">+</div>
+                </div>
+                <div id="colorContainer">
+                    <div id="color1" class="pointer"></div>
+                    <div id="color2" class="pointer"></div>
+                    <div id="color3" class="pointer"></div>
+                </div>
+                <div id="purchaseContainer">
+                    <div id="addToCart" class="invertColor clickable pointer">Add to Cart</div>
+                    <div id="buy" class="invertColor clickable pointer">Buy</div>
+                </div>
             </div>
         </div>
 

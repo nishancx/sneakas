@@ -9,10 +9,15 @@ body {
 .clickable {
     user-select: none;
 }
-a{
+.pointer{
+    cursor: pointer;
+}
+
+a {
     text-decoration: none;
     color: inherit;
 }
+
 /* .navLogo */
 #topNav {
     height: 100px;
@@ -28,12 +33,30 @@ a{
 
 }
 
-#navFor {
-    /* background: #d7d7d7; */
-    line-height: 100px;
-    height: 100px;
-    /* color: #f7f7f7; */
+#navLogo {
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
 }
+
+#navContent {
+    padding-right: 50px;
+    height: 100px;
+}
+
+
+.navContents {
+    float: right;
+    margin: 0 50px;
+    font-weight: 600;
+    font-size: 1.5rem;
+    width: 150px;
+    /* display: flex; */
+    /* justify-content: center; */
+    text-align: center;
+    position: relative;
+}
+
 
 .dropdown {
     /* opacity: 0; */
@@ -47,20 +70,15 @@ a{
     /* color: white; */
 }
 
-.dropdown.dropdownActive {
-    /* display: block; */
-    visibility: visible;
-    opacity: 1;
-
+.navDropdownTitle {
+    position: relative;
 }
 
-.navDropdownTitle {
 
-    /* background: #2f2f2f; */
-    /* border-radius: 10px; */
-    /* padding: 10px 0; */
-    /* margin: 10px 0; */
-    /* line-height: normal;     */
+.navContents:hover .dropdown,
+#navCart:hover .dropdown {
+    visibility: visible;
+    opacity: 1;
 }
 
 .dropdownItem {
@@ -73,59 +91,9 @@ a{
     padding: 10px 0;
 }
 
-#navLogo {
-    font-weight: bold;
-    font-size: 2rem;
-    text-align: center;
-}
 
-#navContent {
-    padding-right: 50px;
-    height: 100px;
-}
 
-.fa-sort-down {
-    /* font-size: 2rem; */
 
-}
-
-.navContents {
-    float: right;
-    margin: 0 50px;
-    font-weight: 600;
-    font-size: 1.5rem;
-    width: 150px;
-    /* display: flex; */
-    /* justify-content: center; */
-    cursor: pointer;
-    text-align: center;
-    position: relative;
-}
-
-.navDropdownTitle {
-    position: relative;
-
-}
-
-/* 
-.navDropdownTitle::after {
-    transition: 0.2s;
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    top: 100%;
-left: 50%;
-bottom: 0;
-}
-
-.navDropdownTitle:hover::after {
-    width: 100%;
-    height: 20px;
-    left: 0;
-    background: #2f2f2f;
-}
-*/
 .forContent {
     /* height: 5% !important; */
     line-height: normal;
@@ -181,7 +149,6 @@ bottom: 0;
     height: 30px;
     line-height: 30px;
     transition: 0.2s;
-    cursor: pointer;
     z-index: 2;
 }
 
@@ -216,7 +183,6 @@ bottom: 0;
     background: #f7f7f7;
     padding: 10px 0px;
     position: relative;
-    cursor: pointer;
 }
 
 .leftNavItems.itemActive::after {
@@ -270,19 +236,12 @@ bottom: 0;
 #main {
     margin-left: 200px;
     background-image: url('../img/nikeAirMax270.jpg');
-    background-size: 86%;
+    background-size: 66%;
     transition: background-size 0.2s, opacity 0.2s;
     background-repeat: no-repeat;
-    /* background-attachment: ; */
-    /* animation: mymove 5s; */
-
     background-position: center !important;
     background-position: 0px 50%;
     height: calc(100vh - 100px) !important;
-    /* transition: opacity 0.2s; */
-    /* height: 100%; */
-    /* transition: background-image 04s !important; */
-    /* -webkit-transition: background-image 04s !important; */
 }
 
 #shoeInfoMain {
@@ -293,7 +252,6 @@ bottom: 0;
     font-weight: 300 !important;
     padding: 5%;
     box-sizing: border-box;
-    /* background: #ccc; */
 }
 
 #shoeNameMain {
@@ -314,9 +272,6 @@ bottom: 0;
     width: 10vw;
     height: 100%;
     float: right;
-    /* position: absolute; */
-    /* right: 0; */
-    /* left: 0; */
     text-align: center;
     align-items: center;
     display: flex;
@@ -332,7 +287,6 @@ bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
     transition: 0.2s;
     border-radius: 30%;
 }
@@ -352,4 +306,121 @@ bottom: 0;
 
 .sizeActive:hover {
     background: #ddd;
+}
+
+#bottomNav {
+    height: 50px;
+    width: calc(100% - 200px - 10vw);
+    /* background: #efefef; */
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* display: flex; */
+    position: absolute;
+    bottom: 0;
+    /* margin-right: 10vw; */
+}
+
+#colorContainer {
+    padding: 20px 40px;
+    padding: 15px 40px 25px 40px;
+    box-sizing: border-box;
+    /* flex: 1; */
+    /* background: #979797; */
+    /* border: 1px solid #2f2f2f; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#color1 {
+    border-radius: 5px 0px 0px 5px;
+    background: #2f2f2f;
+}
+
+#color2 {
+    background: #f44336;
+}
+
+#color3 {
+    border-radius: 0px 5px 5px 0px;
+    background: #e040fb;
+}
+
+#quantitySelectionContainer {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+    /* line-height: 38px; */
+    /* display: flex; */
+    /* justify-content: center; */
+    line-height: 42px;
+    text-align: center;
+    margin: 0 20px 10px 20px;
+    border: 1px solid #2f2f2f;
+    font-weight: 300;
+    border-radius: 25px;
+    /* flex: 1; */
+    font-size: 1.6rem;
+    /* background: #272727; */
+}
+#increaseQuantity{
+    border-radius: 25px 24px 24px 25px;
+
+}
+#decreaseQuantity{
+    border-radius: 24px 25px 25px 24px;
+
+}
+#increaseQuantity, #decreaseQuantity{
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    padding: 0px 20px;
+    text-align: center;
+}
+#quantityDisplay{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    height: 85%;
+    margin: 5px 0;
+    border: none;
+    text-align: center;
+    background: #f7f7f7;
+    font-size: 1.6rem;
+    width: 100%;
+}
+.invertColor:hover{
+    background: #2f2f2f;
+    color: #f7f7f7;
+}
+#purchaseContainer {
+    text-align: center;
+    /* justify-content: center; */
+    align-items: center;
+    /* flex: 1; */
+    border: 1px solid #2f2f2f;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 20px 10px 20px;
+    border-radius: 25px;
+    text-align: center;
+    /* background: #e7e7e7; */
+    line-height: 42px;
+}
+#addToCart, #buy{
+    height: 100%;
+    /* display: flex; */
+    text-align: center;
+    /* align-items: center; */
+    /* width: 100%; */
+}
+#addToCart{
+    border-radius: 25px 24px 24px 25px;
+
+}
+#buy{
+    border-radius: 24px 25px 25px 24px;
+
 }

@@ -70,7 +70,7 @@ function scrollLeftNav(scrollLength) {
 function setSize(elem) {
     document.querySelector('.sizeActive').classList.remove('sizeActive');
     elem.classList.add('sizeActive');
-    let bgSize = 76 + parseInt(elem.innerHTML);
+    let bgSize = 56 + parseInt(elem.innerHTML);
     document.querySelector('#main').style.backgroundSize = bgSize + '%';
 }
 
@@ -94,7 +94,13 @@ function selectShoe(elem, index) {
     }, 200);
 }
 
-function toggleNavDropdown(item) {
-    console.log(item.childNodes[3]);
-    item.childNodes[3].classList.toggle('dropdownActive');
+function changeQuantity(x){
+    let quantityDisplay = document.querySelector('#quantityDisplay');
+    let quantity = quantityDisplay.value;
+    quantity = parseInt(quantity);
+    if(quantity == 1 && x == -1){
+        return;
+    }
+    quantityDisplay.value = (quantity + x);
+
 }
