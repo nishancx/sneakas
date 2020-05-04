@@ -82,7 +82,7 @@ a {
 }
 
 .dropdownItem {
-    border-bottom: 1px solid #2f2f2f;
+    border: 1px solid #2f2f2f;
     background: #2f2f2f;
     border-radius: 3px;
     margin: 10px 0;
@@ -391,12 +391,16 @@ a {
     font-size: 1.6rem;
     width: 100%;
 }
-.invertColor{
+.invertColor, .invertColorReverse{
     transition: 0.2s;
 }
 .invertColor:hover{
     background: #2f2f2f;
     color: #f7f7f7;
+}
+.invertColorReverse:hover{
+    color: #2f2f2f;
+    background: #f7f7f7;
 }
 #purchaseContainer {
     text-align: center;
