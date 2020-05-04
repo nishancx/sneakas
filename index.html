@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneakas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="topNav" class="clickable">
+        <div id="navLogo"><a href="">Sneakas</a></div>
+        <div id="navContent">
+            <div id="navFor" class="navContents" onmouseover="toggleNavDropdown(this)"
+                onmouseout="toggleNavDropdown(this)">
+                <div class="navDropdownTitle">For &#11206;</div>
+                <div class="dropdown">
+                    <div class="dropdownItem">
+                        <a href="">Children</a>
+                    </div>
+                    <div class="dropdownItem">
+                        <a href="">Men</a>
+                    </div>
+                    <div class="dropdownItem">
+                        <a href="">Women</a>
+                    </div>
+                </div>
+            </div>
+            <div id="navBrands" class="navContents" onmouseover="toggleNavDropdown(this)"
+                onmouseout="toggleNavDropdown(this)">
+                <div class="navDropdownTitle">Brands &#11206;</div>
+                <div class="dropdown">
+                    <div class="dropdownItem">
+                        <a href="">Nike</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="navCart" onmouseover="toggleNavDropdown(this)" onmouseout="toggleNavDropdown(this)">
+            <i class="fas fa-shopping-cart"></i>
+            <div class="dropdown navCartDropdown">
+                Your cart is empty
+            </div>
+        </div>
+
+    </div>
+    <div id="mainContainer">
+        <span class="clickable">
+            <div id="leftNavScrollUp" class="leftNavScroll" onclick="leftNavScrollUp()">&#11205;</div>
+        </span>
+        <div id="leftNav" class="clickable">
+            <!-- <div id="scrollBarOverlay"></div> -->
+            <div id="leftNavItem1" class="leftNavItems itemActive" onclick="selectShoe(this, 0)">
+                <img class="leftNavImg" src="img/nikeAirMax270.jpg" alt="Nike Air Max 270"><br>
+                <div class="leftNavText">
+                    Nike Air Max 270 <br>
+                    <div class="shoePriceLeftNav">$149.99</div>
+                </div>
+            </div>
+            <div id="leftNavItem2" class="leftNavItems" onclick="selectShoe(this, 1)">
+                <img class="leftNavImg" src="img/nikeAirMax270React.jpg" alt="Nike Air Max 270 React"><br>
+                <div class="leftNavText">
+                    Nike Air Max 270 React <br>
+                    <div class="shoePriceLeftNav">$179.99</div>
+
+                </div>
+            </div>
+            <div id="leftNavItem3" class="leftNavItems" onclick="selectShoe(this, 2)">
+                <img class="leftNavImg" src="img/nikeAirZoomPegasus.jpg" alt="nike air zoom pegasus"><br>
+                <div class="leftNavText">
+                    Nike Air Zoom Pegasus <br>
+                    <div class="shoePriceLeftNav">$199.99</div>
+                </div>
+            </div>
+            <div id="leftNavItem4" class="leftNavItems" onclick="selectShoe(this, 3)">
+                <img class="leftNavImg" src="img/nikeAirZoomPegasus36.jpg" alt="nike air zoom pegasus 36"><br>
+                <div class="leftNavText">
+                    Nike Air Zoom Pegasus 36<br>
+                    <div class="shoePriceLeftNav">$209.99</div>
+                </div>
+            </div>
+            <div id="leftNavItem5" class="leftNavItems" onclick="selectShoe(this, 4)">
+                <img class="leftNavImg" src="img/nikeDaybreak.jpg" alt="Nike Daybreak"><br>
+                <div class="leftNavText">
+                    Nike Daybreak <br>
+                    <div class="shoePriceLeftNav">$249.99</div>
+                </div>
+            </div>
+        </div>
+        <span class="clickable">
+            <div id="leftNavScrollDown" class="leftNavScroll" onclick="leftNavScrollDown()" class="clickable">&#11206;
+            </div>
+        </span>
+        <div id="main">
+            <div id="shoeInfoMain">
+                <div id="shoeNameMain">Nike Air Max 270</div>
+                <div id="shoePriceMain">$149.99</div>
+            </div>
+            <div id="sizeContainer" class="clickable">
+                <div id="sizeText">Sizes</div>
+                <div id="size7" class="sizes" onclick="setSize(this)">7</div>
+                <div id="size8" class="sizes" onclick="setSize(this)">8</div>
+                <div id="size9" class="sizes" onclick="setSize(this)">9</div>
+                <div id="size10" class="sizes sizeActive" onclick="setSize(this)">10</div>
+                <div id="size12" class="sizes" onclick="setSize(this)">11</div>
+                <div id="size12" class="sizes" onclick="setSize(this)">12</div>
+                <div id="size13" class="sizes" onclick="setSize(this)">13</div>
+                <div id="size14" class="sizes" onclick="setSize(this)">14</div>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
