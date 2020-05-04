@@ -391,6 +391,9 @@ a {
     font-size: 1.6rem;
     width: 100%;
 }
+.invertColor{
+    transition: 0.2s;
+}
 .invertColor:hover{
     background: #2f2f2f;
     color: #f7f7f7;
